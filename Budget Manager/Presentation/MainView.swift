@@ -10,6 +10,11 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
 		TabView {
+			TransactionsViewBuilder
+				.makeTransactionsView()
+				.tabItem {
+					Label("Transactions", systemImage: "dollarsign.circle")
+				}
 			WalletsView()
 				.tabItem {
 					Label("Wallets", systemImage: "wallet.pass")

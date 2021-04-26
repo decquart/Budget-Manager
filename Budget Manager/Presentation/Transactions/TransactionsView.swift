@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct TransactionsView: View {
+	let viewModel: TransactionsViewModel
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+		Button("Add new") {
+			print("added")
+		}
     }
 }
 
 struct TransactionsView_Previews: PreviewProvider {
     static var previews: some View {
-        TransactionsView()
+		TransactionsViewBuilder.makeTransactionsView()
     }
 }
