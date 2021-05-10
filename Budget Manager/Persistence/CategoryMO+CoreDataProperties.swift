@@ -14,8 +14,8 @@ extension CategoryMO {
         return NSFetchRequest<CategoryMO>(entityName: "CategoryMO")
     }
 
-    @NSManaged public var categoryName: String?
-    @NSManaged public var imageName: String?
+    @NSManaged public var categoryName: String
+    @NSManaged public var imageName: String
     @NSManaged public var transactions: NSSet?
 }
 

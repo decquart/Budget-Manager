@@ -30,15 +30,11 @@ final class CoreDataStack {
 		return self.persistentContainer.viewContext
 	}()
 
-	func saveContext() {
+	func saveContext() throws {
 		if !mainContext.hasChanges {
 			return
 		}
 
-		do {
-			try mainContext.save()
-		} catch let error as NSError {
-			print("Unresolved error \(error.localizedDescription), \(error.userInfo)")
-		}
+		try mainContext.save()
 	}
 }

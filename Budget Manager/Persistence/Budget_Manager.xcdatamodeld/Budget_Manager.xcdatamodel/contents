@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="CategoryMO" representedClassName="CategoryMO" syncable="YES">
-        <attribute name="categoryName" optional="YES" attributeType="String"/>
-        <attribute name="imageName" optional="YES" attributeType="String"/>
+        <attribute name="categoryName" attributeType="String"/>
+        <attribute name="imageName" attributeType="String"/>
         <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TransactionMO" inverseName="category" inverseEntity="TransactionMO"/>
     </entity>
     <entity name="TransactionMO" representedClassName="TransactionMO" syncable="YES">
@@ -13,7 +13,7 @@
         <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CategoryMO" inverseName="transactions" inverseEntity="CategoryMO"/>
     </entity>
     <elements>
+        <element name="CategoryMO" positionX="-54" positionY="18" width="128" height="74"/>
         <element name="TransactionMO" positionX="-28.7178955078125" positionY="-246.832275390625" width="128" height="118"/>
-        <element name="CategoryMO" positionX="-54" positionY="18" width="128" height="88"/>
     </elements>
 </model>

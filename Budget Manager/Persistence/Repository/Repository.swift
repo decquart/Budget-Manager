@@ -15,7 +15,7 @@ enum TestError: Error {
 protocol Repository {
 	associatedtype Item
 
-	func get(by predicate: NSPredicate) -> AnyPublisher<Item, Error>
+	func get(by predicate: NSPredicate) -> AnyPublisher<[Item], Error>
 	func getAll() -> AnyPublisher<[Item], Error>
 	func add(_ item: Item) -> AnyPublisher<Void, Error>
 	func update(_ item: Item) -> AnyPublisher<Void, Error>

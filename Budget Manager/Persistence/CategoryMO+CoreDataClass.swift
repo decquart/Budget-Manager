@@ -13,3 +13,17 @@ import CoreData
 public class CategoryMO: NSManagedObject {
 
 }
+
+extension CategoryMO {
+	var toModel: Category {
+		Category(
+			name: categoryName,
+			imageName: imageName
+		)
+	}
+
+	func map(from model: Category) {
+		self.categoryName = model.name
+		self.imageName = model.imageName
+	}
+}
