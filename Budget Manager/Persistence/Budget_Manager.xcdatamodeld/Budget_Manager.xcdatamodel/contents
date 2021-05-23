@@ -3,6 +3,7 @@
     <entity name="CategoryMO" representedClassName="CategoryMO" syncable="YES">
         <attribute name="categoryName" attributeType="String"/>
         <attribute name="imageName" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TransactionMO" inverseName="category" inverseEntity="TransactionMO"/>
     </entity>
     <entity name="TransactionMO" representedClassName="TransactionMO" syncable="YES">
@@ -13,7 +14,7 @@
         <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CategoryMO" inverseName="transactions" inverseEntity="CategoryMO"/>
     </entity>
     <elements>
-        <element name="CategoryMO" positionX="-54" positionY="18" width="128" height="74"/>
+        <element name="CategoryMO" positionX="-54" positionY="18" width="128" height="89"/>
         <element name="TransactionMO" positionX="-28.7178955078125" positionY="-246.832275390625" width="128" height="118"/>
     </elements>
 </model>

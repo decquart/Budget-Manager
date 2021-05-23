@@ -8,6 +8,10 @@
 import Foundation
 import Combine
 
-class TransactionsViewModel {
-	
+class TransactionsViewModel<CategoriesRepo: Repository> {
+	let repo: CategoriesRepo
+
+	init(repo: CategoriesRepo) {
+		self.repo = repo
+	}
 }

@@ -18,12 +18,14 @@ extension CategoryMO {
 	var toModel: Category {
 		Category(
 			name: categoryName,
-			imageName: imageName
+			imageName: imageName,
+			type: Category.CategoryType(rawValue: Int(type))!
 		)
 	}
 
 	func map(from model: Category) {
 		self.categoryName = model.name
 		self.imageName = model.imageName
+		self.type = Int16(model.type.rawValue)
 	}
 }

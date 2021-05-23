@@ -7,7 +7,12 @@
 
 import Foundation
 
-struct Category {
+struct Category: Decodable {
+	enum CategoryType: Int, Decodable {
+		case expenses, income
+	}
+
 	let name: String
 	let imageName: String
+	let type: CategoryType
 }

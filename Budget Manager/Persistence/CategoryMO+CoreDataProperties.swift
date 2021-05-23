@@ -16,6 +16,7 @@ extension CategoryMO {
 
     @NSManaged public var categoryName: String
     @NSManaged public var imageName: String
+    @NSManaged public var type: Int16
     @NSManaged public var transactions: NSSet?
 }
 

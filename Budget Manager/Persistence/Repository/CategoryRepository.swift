@@ -7,9 +7,13 @@
 
 import Foundation
 import Combine
+import CoreData
 
 final class CategoryRepository: Repository {
 	private let cdStack = CoreDataStack.shared
+	private var fetchRequest: NSFetchRequest<CategoryMO> {
+		return NSFetchRequest<CategoryMO>(entityName: "CategoryMO")
+	}
 
 	func get(by predicate: NSPredicate) -> AnyPublisher<[Category], Error> {
 		Just(CategoryMO.fetchRequest())
@@ -22,9 +26,10 @@ final class CategoryRepository: Repository {
 	}
 
 	func getAll() -> AnyPublisher<[Category], Error> {
-		Just(CategoryMO.fetchRequest())
+
+		Just(fetchRequest)
 			.tryMap(cdStack.mainContext.fetch)
-			.map { $0.compactMap { $0 as? Category } }
+			.map { $0.compactMap { $0.toModel } }
 			.eraseToAnyPublisher()
 	}
 
@@ -53,11 +58,12 @@ final class CategoryRepository: Repository {
 	func delete(_ item: Category) -> AnyPublisher<Void, Error> {
 		tryFetch(by: item.name)
 			.tryMap(cdStack.mainContext.delete(_:))
+			.tryMap(cdStack.saveContext)
 			.eraseToAnyPublisher()
 	}
 
 	private func tryFetch(by name: String) -> AnyPublisher<CategoryMO, Error> {
-		Just(CategoryMO.fetchRequest())
+		Just(fetchRequest)
 			.handleEvents(receiveOutput: {
 				$0.predicate = NSPredicate(format: "categoryName = %@", name)
 			})

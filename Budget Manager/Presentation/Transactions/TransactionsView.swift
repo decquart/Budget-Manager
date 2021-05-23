@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TransactionsView: View {
-	let viewModel: TransactionsViewModel
+	let viewModel: TransactionsViewModel<CategoryRepository>
 
     var body: some View {
 		Button("Add new") {

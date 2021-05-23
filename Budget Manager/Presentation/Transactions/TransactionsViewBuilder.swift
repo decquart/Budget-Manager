@@ -10,7 +10,8 @@ import SwiftUI
 
 enum TransactionsViewBuilder {
 	static func makeTransactionsView() -> some View {
-		let viewModel = TransactionsViewModel()
+		let repository = CategoryRepository()
+		let viewModel = TransactionsViewModel<CategoryRepository>(repo: repository)
 		let view = TransactionsView(viewModel: viewModel)
 		return view
 	}
