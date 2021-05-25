@@ -21,7 +21,7 @@ final class CategoryRepository: Repository {
 				fetchRequest.predicate = predicate
 			})
 			.tryMap(cdStack.mainContext.fetch)
-			.map { $0.compactMap { $0 as? Category } }
+			.map { $0.compactMap { ($0 as? CategoryMO)?.toModel } }
 			.eraseToAnyPublisher()
 	}
 

@@ -13,3 +13,21 @@ import CoreData
 public class TransactionMO: NSManagedObject {
 
 }
+
+extension TransactionMO {
+	var toModel: Transaction {
+		Transaction(
+			id: id,
+			amount: amount,
+			createdAt: createdAt,
+			photoData: photo
+		)
+	}
+
+	func map(from model: Transaction) {
+		self.id = model.id
+		self.amount = model.amount
+		self.createdAt = model.createdAt
+		self.photo = model.photoData
+	}
+}

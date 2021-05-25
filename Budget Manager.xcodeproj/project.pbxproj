@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D302D41265C44A700F5BB1E /* TransactionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D302D40265C44A700F5BB1E /* TransactionRepository.swift */; };
+		2D302D44265C453F00F5BB1E /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D302D43265C453F00F5BB1E /* Transaction.swift */; };
 		2D73695D2616749900E1A2A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D73695C2616749900E1A2A1 /* AppDelegate.swift */; };
 		2D73695F2616749900E1A2A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D73695E2616749900E1A2A1 /* SceneDelegate.swift */; };
 		2D7369612616749900E1A2A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7369602616749900E1A2A1 /* ContentView.swift */; };
@@ -32,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D302D40265C44A700F5BB1E /* TransactionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRepository.swift; sourceTree = "<group>"; };
+		2D302D43265C453F00F5BB1E /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		2D7369592616749900E1A2A1 /* Budget Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Budget Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D73695C2616749900E1A2A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D73695E2616749900E1A2A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 			children = (
 				2D78A7162635BBCB00C55A70 /* TransactionType.swift */,
 				2D78A84E2637645900C55A70 /* Category.swift */,
+				2D302D43265C453F00F5BB1E /* Transaction.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 			children = (
 				2D78A84726373E1600C55A70 /* Repository.swift */,
 				2D78A84B2637641700C55A70 /* CategoryRepository.swift */,
+				2D302D40265C44A700F5BB1E /* TransactionRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -245,8 +251,10 @@
 				2D78A7372635DE5600C55A70 /* CoreDataStack.swift in Sources */,
 				2D78A72F2635DCF900C55A70 /* TransactionMO+CoreDataClass.swift in Sources */,
 				2D78A84C2637641700C55A70 /* CategoryRepository.swift in Sources */,
+				2D302D41265C44A700F5BB1E /* TransactionRepository.swift in Sources */,
 				2D7369612616749900E1A2A1 /* ContentView.swift in Sources */,
 				2D78A84826373E1600C55A70 /* Repository.swift in Sources */,
+				2D302D44265C453F00F5BB1E /* Transaction.swift in Sources */,
 				2D736A29261A45DF00E1A2A1 /* WalletsView.swift in Sources */,
 				2D78A7172635BBCB00C55A70 /* TransactionType.swift in Sources */,
 				2DA93B2A26591680003495C4 /* CategoryMO+CoreDataProperties.swift in Sources */,
