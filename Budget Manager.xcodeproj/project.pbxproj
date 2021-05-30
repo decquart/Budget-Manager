@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2D302D41265C44A700F5BB1E /* TransactionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D302D40265C44A700F5BB1E /* TransactionRepository.swift */; };
 		2D302D44265C453F00F5BB1E /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D302D43265C453F00F5BB1E /* Transaction.swift */; };
+		2D6EC5602663E3AB00CB1EDD /* View+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6EC55F2663E3AB00CB1EDD /* View+Shadow.swift */; };
+		2D6EC5642663ECDA00CB1EDD /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6EC5632663ECDA00CB1EDD /* ColorExtension.swift */; };
+		2D6EC5682663F08E00CB1EDD /* NeuButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6EC5672663F08E00CB1EDD /* NeuButtonStyle.swift */; };
 		2D73695D2616749900E1A2A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D73695C2616749900E1A2A1 /* AppDelegate.swift */; };
 		2D73695F2616749900E1A2A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D73695E2616749900E1A2A1 /* SceneDelegate.swift */; };
 		2D7369612616749900E1A2A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7369602616749900E1A2A1 /* ContentView.swift */; };
@@ -36,6 +39,9 @@
 /* Begin PBXFileReference section */
 		2D302D40265C44A700F5BB1E /* TransactionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRepository.swift; sourceTree = "<group>"; };
 		2D302D43265C453F00F5BB1E /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		2D6EC55F2663E3AB00CB1EDD /* View+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Shadow.swift"; sourceTree = "<group>"; };
+		2D6EC5632663ECDA00CB1EDD /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		2D6EC5672663F08E00CB1EDD /* NeuButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuButtonStyle.swift; sourceTree = "<group>"; };
 		2D7369592616749900E1A2A1 /* Budget Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Budget Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D73695C2616749900E1A2A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D73695E2616749900E1A2A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +79,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D6EC55E2663E38B00CB1EDD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2D6EC55F2663E3AB00CB1EDD /* View+Shadow.swift */,
+				2D6EC5632663ECDA00CB1EDD /* ColorExtension.swift */,
+				2D6EC5672663F08E00CB1EDD /* NeuButtonStyle.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		2D7369502616749900E1A2A1 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +108,7 @@
 		2D73695B2616749900E1A2A1 /* Budget Manager */ = {
 			isa = PBXGroup;
 			children = (
+				2D6EC55E2663E38B00CB1EDD /* Extensions */,
 				2D78A7252635DC8400C55A70 /* Persistence */,
 				2D736A24261A44C400E1A2A1 /* Presentation */,
 				2D73695C2616749900E1A2A1 /* AppDelegate.swift */,
@@ -248,6 +265,9 @@
 				2D78A84F2637645900C55A70 /* Category.swift in Sources */,
 				2D736A26261A450600E1A2A1 /* MainView.swift in Sources */,
 				2D78A73B263617D600C55A70 /* TransactionsViewModel.swift in Sources */,
+				2D6EC5602663E3AB00CB1EDD /* View+Shadow.swift in Sources */,
+				2D6EC5682663F08E00CB1EDD /* NeuButtonStyle.swift in Sources */,
+				2D6EC5642663ECDA00CB1EDD /* ColorExtension.swift in Sources */,
 				2D78A7372635DE5600C55A70 /* CoreDataStack.swift in Sources */,
 				2D78A72F2635DCF900C55A70 /* TransactionMO+CoreDataClass.swift in Sources */,
 				2D78A84C2637641700C55A70 /* CategoryRepository.swift in Sources */,

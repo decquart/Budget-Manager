@@ -24,6 +24,8 @@ struct TransactionsView: View {
 				viewModel.add(transaction: transaction)
 				print("added")
 			}
+			.buttonStyle(NeuButtonStyle(width: 320, height: 48))
+			.padding()
 
 		}
     }
