@@ -26,7 +26,6 @@ final class CategoryRepository: Repository {
 	}
 
 	func getAll() -> AnyPublisher<[Category], Error> {
-
 		Just(fetchRequest)
 			.tryMap(cdStack.mainContext.fetch)
 			.map { $0.compactMap { $0.toModel } }

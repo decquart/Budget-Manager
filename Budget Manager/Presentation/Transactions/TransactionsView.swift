@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct TransactionsView: View {
-	let viewModel: TransactionsViewModel<CategoryRepository>
+	@ObservedObject var viewModel: TransactionsViewModel<CategoryRepository, TransactionRepository>
 
     var body: some View {
-		Button("Add new") {
-			print("added")
+		VStack {
+			Spacer()
+			Button("Add new") {
+				let transaction = Transaction(
+					id: UUID.init(),
+					amount: 10.0,
+					createdAt: Date(),
+					photoData: nil
+				)
+
+				viewModel.add(transaction: transaction)
+				print("added")
+			}
+
 		}
     }
 }
